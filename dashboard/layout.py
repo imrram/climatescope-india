@@ -8,7 +8,7 @@ df_rain = pd.read_csv("output/rainfall_trend.csv")
 df_heat = pd.read_csv("output/heatwave_days.csv")
 
 
-# Convert Kelvin to Celsius (optional, can be removed if you prefer Kelvin)
+# Convert Kelvin to Celsius
 df_temp["avg_temp"] = df_temp["avg_temp"] - 273.15
 
 # Group temperature and rainfall by year (in case duplicates exist)
@@ -16,7 +16,6 @@ avg_temp_by_year = df_temp.groupby("year")["avg_temp"].mean().reset_index()
 avg_rain_by_year = df_rain.groupby("year")["avg_rainfall"].mean().reset_index()
 
 
-# Layout
 layout = html.Div(
     style={"backgroundColor": "#f9f9f9", "padding": "40px"},
     children=[

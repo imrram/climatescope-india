@@ -1,19 +1,10 @@
-# NetCDF & data handling
 xarray
 netCDF4
 pandas
 numpy
-
-# Spark
 pyspark
-
-# Visualization dashboard
 plotly
 dash
 dash-bootstrap-components
-
-# Dataset management
 kagglehub
-
-# Optional: progress/status
 tqdm
